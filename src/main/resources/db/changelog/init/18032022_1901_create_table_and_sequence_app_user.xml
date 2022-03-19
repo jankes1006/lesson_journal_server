@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+    <property name="INCREMENT_VALUE" value="1"/>
+    <property name="MAX_VALUE" value="99999999999"/>
+
+    <changeSet author="rubachj" id="create_table_app_user">
+        <createTable tableName="APP_USER">
+            <column name="FIRST_NAME" type="VARCHAR2(255 CHAR)"/>
+            <column name="SECOND_NAME" type="VARCHAR2(255 CHAR)"/>
+            <column name="PERSONAL_ID_NUMBER" type="VARCHAR2(255 CHAR)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR2(255 CHAR)"/>
+            <column name="CITY" type="VARCHAR2(255 CHAR)"/>
+            <column name="STREET_NAME" type="VARCHAR2(255 CHAR)"/>
+            <column name="BUILDING_NUMBER" type="VARCHAR2(255 CHAR)"/>
+            <column name="APARTAMENT_NUMBER" type="VARCHAR2(255 CHAR)"/>
+            <column name="ROLE" type="VARCHAR2(255 CHAR)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="rubachj" id="create_sequence_app_user">
+        <createSequence sequenceName="APP_USER_SEQUENCE" incrementBy="${INCREMENT_VALUE}"
+                        startValue="${INCREMENT_VALUE}" maxValue="${MAX_VALUE}"
+        />
+    </changeSet>
+</databaseChangeLog>
