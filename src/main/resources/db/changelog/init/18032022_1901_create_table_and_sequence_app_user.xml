@@ -8,6 +8,7 @@
 
     <changeSet author="rubachj" id="create_table_app_user">
         <createTable tableName="APP_USER">
+            <column name="ID" type="NUMBER(19,0)"/>
             <column name="FIRST_NAME" type="VARCHAR2(255 CHAR)"/>
             <column name="SECOND_NAME" type="VARCHAR2(255 CHAR)"/>
             <column name="PERSONAL_ID_NUMBER" type="VARCHAR2(255 CHAR)"/>

@@ -25,5 +25,5 @@ public class AppUser {
     private String phoneNumber;
     @Embedded
     private Address address;
-    private UserRole userRole;
+    private UserRole role;
 }
